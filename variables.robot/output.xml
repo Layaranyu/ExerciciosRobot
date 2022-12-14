@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20221214 01:27:41.823" rpa="false" schemaversion="3">
+<suite id="s1" name="Variables" source="C:\Users\raphael.maciel\Desktop\variables.robot\variables.robot">
+<test id="s1-t1" name="qualquer 1s" line="13">
+<kw name="qualquer 1s">
+<kw name="Log" library="BuiltIn">
+<arg>Mes 1: ${MESES[0]} e Mes 3: ${MESES[2]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221214 01:27:42.514" level="INFO">Mes 1: Janeiro e Mes 3: Março</msg>
+<status status="PASS" starttime="20221214 01:27:42.513" endtime="20221214 01:27:42.514"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Mês e dias:${DIASEMESES}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221214 01:27:42.514" endtime="20221214 01:27:42.515"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Mês e dias:${DIASEMESES}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221214 01:27:42.516" level="INFO">Mês e dias:{'Janeiro': '30', 'Fevereiro': '28', 'Março': '31', 'Abril': '30', 'Maio': '31 Junho=30', 'Julho': '31', 'Agosto': '31 Setembro=30', 'Outubro': '31', 'Novembro': '30', 'Dezembro': '31'}</msg>
+<status status="PASS" starttime="20221214 01:27:42.515" endtime="20221214 01:27:42.516"/>
+</kw>
+<status status="PASS" starttime="20221214 01:27:42.513" endtime="20221214 01:27:42.516"/>
+</kw>
+<status status="PASS" starttime="20221214 01:27:42.511" endtime="20221214 01:27:42.516"/>
+</test>
+<test id="s1-t2" name="caso de teste 1" line="16">
+<kw name="Criando email aleatorio">
+<kw name="palavra aleatoria">
+<kw name="Generate Random String" library="String">
+<var>${PALAVRAALEATORIA}</var>
+<arg>length=8</arg>
+<arg>chars=[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20221214 01:27:42.521" level="INFO">${PALAVRAALEATORIA} = 3NXjJNPN</msg>
+<status status="PASS" starttime="20221214 01:27:42.520" endtime="20221214 01:27:42.521"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PALAVRAALEATORIA}</arg>
+<arg>${PALAVRAALEATORIA}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20221214 01:27:42.521" level="INFO">${PALAVRAALEATORIA} = 3NXjJNPN</msg>
+<status status="PASS" starttime="20221214 01:27:42.521" endtime="20221214 01:27:42.521"/>
+</kw>
+<status status="PASS" starttime="20221214 01:27:42.519" endtime="20221214 01:27:42.521"/>
+</kw>
+<kw name="nome + sobrenome + palavra aleatória + @testerobot.com">
+<arg>${DADOSPESSOAIS.Nome}</arg>
+<arg>${DADOSPESSOAIS.sobrenome}</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${EMAIL}</var>
+<arg>${NOME}</arg>
+<arg>${SOBRENOME}</arg>
+<arg>${PALAVRAALEATORIA}</arg>
+<arg>@testerobot.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20221214 01:27:42.523" level="INFO">${EMAIL} = Layara Santos 3NXjJNPN @testerobot.com</msg>
+<status status="PASS" starttime="20221214 01:27:42.522" endtime="20221214 01:27:42.523"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${EMAIL}</var>
+<arg>${EMAIL}</arg>
+<arg>${SPACE}</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20221214 01:27:42.523" level="INFO">${EMAIL} = LayaraSantos3NXjJNPN@testerobot.com</msg>
+<status status="PASS" starttime="20221214 01:27:42.523" endtime="20221214 01:27:42.523"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221214 01:27:42.523" level="INFO">LayaraSantos3NXjJNPN@testerobot.com</msg>
+<status status="PASS" starttime="20221214 01:27:42.523" endtime="20221214 01:27:42.523"/>
+</kw>
+<status status="PASS" starttime="20221214 01:27:42.521" endtime="20221214 01:27:42.524"/>
+</kw>
+<status status="PASS" starttime="20221214 01:27:42.519" endtime="20221214 01:27:42.524"/>
+</kw>
+<status status="PASS" starttime="20221214 01:27:42.518" endtime="20221214 01:27:42.524"/>
+</test>
+<status status="PASS" starttime="20221214 01:27:41.825" endtime="20221214 01:27:42.526"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Variables">Variables</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
