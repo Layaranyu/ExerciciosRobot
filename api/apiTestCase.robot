@@ -25,3 +25,11 @@ Alterar um livro (put)
     Alterar um livro (put)    
 Deletar um livro(delete)
     Deletar um livro "5"
+
+Requisitar o Activities
+    Requisitar todos os Activities
+    Requisitar o Activities numero "20"
+    Cadastrar nova Activities
+    Conferir se retorna a nova Activities
+    Alterar Activities
+    Deletar Activities
